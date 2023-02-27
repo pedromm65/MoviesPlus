@@ -10,8 +10,8 @@ export class ApiService {
     private http: HttpClient
   ) { }
 
-  get apiGetMovies(): Observable<any> {
-    return this.http.get<any>(this.url).pipe(
+  public apiGetMovies(url: string): Observable<any> {
+    return this.http.get<any>(url).pipe(
       map(res => res)
     )
   }
