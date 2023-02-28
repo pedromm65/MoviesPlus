@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { map, tap } from 'rxjs';
 import { ApiService } from 'src/app/service/api.service';
 
 @Component({
@@ -9,8 +8,8 @@ import { ApiService } from 'src/app/service/api.service';
 })
 export class ListMoviesComponent implements OnInit {
   private url: string = 'https://api.themoviedb.org/3/movie/popular?api_key=75d84e72756f109a90f42aa08e51a909&language=pt-BR&page=1'
-
   public getAllMovies: any
+  public testUrl: any
   constructor(
     private apiService: ApiService
   ) {}
@@ -18,7 +17,6 @@ export class ListMoviesComponent implements OnInit {
     this.apiService.apiMovies(this.url).subscribe(
       res => {
         this.getAllMovies = res.results
-        console.log(this.getAllMovies)
       }
     )
   }

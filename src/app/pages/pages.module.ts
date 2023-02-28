@@ -6,11 +6,15 @@ import { SharedModule } from '../shared/shared.module';
 import { DetailsComponent } from './details/details.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { FontAwesomeModule,  } from '@fortawesome/angular-fontawesome';
+import { TopRatedComponent } from './top-rated/top-rated.component';
+import { NewMoviesComponent } from './new-movies/new-movies.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    DetailsComponent
+    DetailsComponent,
+    TopRatedComponent,
+    NewMoviesComponent
   ],
   imports: [
     CommonModule,

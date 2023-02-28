@@ -3,7 +3,7 @@
     <div class="cards">
       <ng-template ngFor let-movie [ngForOf]="getAllMovies">
           <button [routerLink]="['details', movie.id]">
-              <img *ngIf="movie.poster_path" [lazyLoad]="'https://image.tmdb.org/t/p/w185/' + movie.poster_path"  alt="">
+              <img *ngIf="movie.poster_path" src="{{ 'https://image.tmdb.org/t/p/w185/' + movie.poster_path }}"  alt="Capa">
               <h4> {{ movie.title }} </h4>
           </button>
       </ng-template>

@@ -1,0 +1,14 @@
+<app-menu></app-menu>
+
+<h1>Upcoming movies</h1>
+
+<div class="container">
+  <div class="cards">
+    <ng-template ngFor let-movie [ngForOf]="getNewMovies">
+        <button [routerLink]="['/details', movie.id]">
+            <img *ngIf="movie.poster_path" [lazyLoad]="'https://image.tmdb.org/t/p/w185/' + movie.poster_path"  alt="">
+            <h4> {{ movie.title }} </h4>
+        </button>
+    </ng-template>
+  </div>
+</div>

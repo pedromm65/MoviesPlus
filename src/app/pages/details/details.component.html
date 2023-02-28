@@ -9,8 +9,8 @@
     </ul>
     <h4> {{ movie.title }} </h4>
     <p class="overview"> {{ movie.overview }} </p>
-    <p> Budget: <fa-icon [icon]="faDollar"></fa-icon>{{ movie.budget }} </p>
+    <p *ngIf="movie.budget"> Budget: <fa-icon [icon]="faDollar"></fa-icon>{{ movie.budget }} </p>
     <p>Popularity: {{ movie.popularity }} </p>
-    <p><fa-icon [icon]="starIcon"></fa-icon>{{ movie.vote_average }}</p>
+    <p class="star"><fa-icon [icon]="starIcon"></fa-icon>{{ movie.vote_average }}</p>
   </ng-template>
 </div>
