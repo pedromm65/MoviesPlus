@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 import { ListMoviesComponent } from './list-movies/list-movies.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image'
@@ -11,7 +12,8 @@ import { LazyLoadImageModule } from 'ng-lazyload-image'
   ],
   imports: [
     CommonModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    RouterModule
   ],
   exports: [
       MenuComponent,

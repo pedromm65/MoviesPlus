@@ -1,1 +1,16 @@
-<p>details works!</p>
+<app-menu></app-menu>
+<div class="container">
+  <ng-template [ngIf]="isLoading">
+    <img *ngIf="movie.poster_path" [lazyLoad]="'https://image.tmdb.org/t/p/w185/' + movie.poster_path" alt="">
+    <ul>
+      <li *ngFor="let value of movie.genres">
+        {{ value.name }}
+      </li>
+    </ul>
+    <h4> {{ movie.title }} </h4>
+    <p class="overview"> {{ movie.overview }} </p>
+    <p> Budget: <fa-icon [icon]="faDollar"></fa-icon>{{ movie.budget }} </p>
+    <p>Popularity: {{ movie.popularity }} </p>
+    <p><fa-icon [icon]="starIcon"></fa-icon>{{ movie.vote_average }}</p>
+  </ng-template>
+</div>
